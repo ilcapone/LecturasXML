@@ -1,0 +1,29 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1481474981067.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "69D268CE",
+    "lastKnownWriteTime" : 0,
+    "last_content_update" : 1481474981067,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "E82C867D",
+        "caption" : "Madhu2012",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=Madhu2012&cache_key=E82C867D",
+        "displayedObservations" : "38",
+        "environment" : "",
+        "object" : "Madhu2012",
+        "preview" : "0",
+        "totalObservations" : "38",
+        "variables" : "456"
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

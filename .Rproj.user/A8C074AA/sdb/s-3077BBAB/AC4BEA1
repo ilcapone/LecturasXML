@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "\nlibrary(XML)\n\n#con <-url(\"http://www.imdb.com/chart/top\")\n#htmlCode<-readLines(con)\n#htmlCode\n#close(con)\n\nurl<-\"http://www.imdb.com/chart/top\"\nhtmlCode2 <-htmlParse(url)\nxpathSApply(htmlCode2 , \"//title\", xmlValue)\nxpathSApply(htmlCode2, \"//td[@class='titleColumn']\", xmlValue)\n\n##lectura httr\nlibrary(httr)\nhtml2 <-GET(\"http://www.imdb.com/chart/top\")\ncontent <-content(html2, as=\"text\")\nparsedHtml<-htmlParse(content, asText=TRUE)\nxpathSApply(parsedHtml, \"//title\", xmlValue)\n\n##Consultas a google\nsearchthis<-\"Name+subname+secondSubname\"\ngoogle <-handle(\"http://google.com\")\nsquery<-paste(\"search?q=\", searchthis, sep= \"\")\ngsearch<-GET(handle = google, path = squery)\nstatus_code(gsearch)\nheaders(gsearch)\ncontent2 <-htmlParse(content(gsearch, \"text\"))\nresults <-xpathSApply(xmlRoot(xmlRoot(content2)), \"//div[@class=\\\"g\\\"]\", xmlValue)\nresults\n\n",
+    "created" : 1481477010097.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1814523647",
+    "id" : "AC4BEA1",
+    "lastKnownWriteTime" : 1481478249,
+    "last_content_update" : 1481478249284,
+    "path" : "~/DataDrivenSecurityProyects/LecturasXML/Web_Lecture.R",
+    "project_path" : "Web_Lecture.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

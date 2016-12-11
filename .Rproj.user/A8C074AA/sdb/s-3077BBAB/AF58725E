@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "\n\nlibrary(XML)\n\nfileUrl= \"C:/Users/Öuri/Documents/DataDrivenSecurityProyects/LecturasXML/prueba.xml\"\ndoc<-xmlParse(fileUrl)\nrootNode<-xmlRoot(doc)\n\n#Turning XML into a dataframe\nMadhu2012=ldply(xmlToList(\"pubmed_sample.xml\"), data.frame) #completes with errors: \"row names were found from a short variable and have been discarded\"\nView(Madhu2012) #for easy checking that the data is properly formatted\nMadhu2012.Clean=Madhu2012[Madhu2012[25]=='Y',] #gets rid of duplicated rows\n\n\n#xmlName(rootNode)\n#xmlSize(rootNode) \n#xmlName(rootNode[[1]]) \n#xmlSApply(rootNode,xmlValue)\n#rootNode[[1]]\n#Root Node's children\n#xmlSize(xmltop[[1]]) #number of nodes in each child\n#xmlSApply(xmltop[[1]], xmlName) #name(s)\n#xmlSApply(xmltop[[1]], xmlAttrs) #attribute(s)\n#xmlSApply(xmltop[[1]], xmlSize) #size\n",
+    "created" : 1481471305355.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "893299184",
+    "id" : "AF58725E",
+    "lastKnownWriteTime" : 1481476959,
+    "last_content_update" : 1481476959670,
+    "path" : "~/DataDrivenSecurityProyects/LecturasXML/XML_Lecure.R",
+    "project_path" : "XML_Lecure.R",
+    "properties" : {
+        "docOutlineVisible" : "0",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
