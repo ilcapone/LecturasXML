@@ -2,14 +2,17 @@
 
 library(XML)
 
-fileUrl= "C:/Users/Öuri/Documents/DataDrivenSecurityProyects/LecturasXML/prueba.xml"
+#C:/Users/Öuri/Documents/DataDrivenSecurityProyects/LecturasXML/prueba.xml
+
+fileUrl= "Z:/DDS/LecturasXML/prueba.xml"
 doc<-xmlParse(fileUrl)
 rootNode<-xmlRoot(doc)
+rootNode
 
 #Turning XML into a dataframe
-Madhu2012=ldply(xmlToList("pubmed_sample.xml"), data.frame) #completes with errors: "row names were found from a short variable and have been discarded"
-View(Madhu2012) #for easy checking that the data is properly formatted
-Madhu2012.Clean=Madhu2012[Madhu2012[25]=='Y',] #gets rid of duplicated rows
+#Madhu2012=ldply(xmlToList("pubmed_sample.xml"), data.frame) #completes with errors: "row names were found from a short variable and have been discarded"
+#View(Madhu2012) #for easy checking that the data is properly formatted
+#Madhu2012.Clean=Madhu2012[Madhu2012[25]=='Y',] #gets rid of duplicated rows
 
 
 #xmlName(rootNode)
